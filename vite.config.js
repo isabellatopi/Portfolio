@@ -8,7 +8,18 @@ export default defineConfig(({ command }) => ({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    sourcemap: false
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          // Mantener PDFs en la raíz de dist para acceso directo
+          if (assetInfo.name && assetInfo.name.endsWith('.pdf')) {
+            return '[name].[ext]';
+          }
+          return 'assets/[name]-[hash].[ext]';
+        }
+      }
+    }
   },
   server: {
     host: true, // Permite conexiones externas
@@ -20,5 +31,8 @@ export default defineConfig(({ command }) => ({
       '.ngrok-free.app', // Permite todos los subdominios de ngrok
       '.ngrok.app'
     ]
-  }
+  },
+  // Configuración para servir archivos estáticos correctamente
+  publicDir: 'public',
+  assetsInclude: ['**/*.pdf']
 }))

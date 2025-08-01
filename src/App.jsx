@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import { Download } from 'lucide-react';
 import LoadingScreen from './components/LoadingScreen';
 import NavigationDots from './components/NavigationDots';
 import HeroSection from './components/HeroSection';
@@ -120,9 +121,47 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Función para descargar CV
+  const downloadCV = () => {
+    // Como toda la app usa /Portfolio/, el PDF también estará ahí
+    window.open('./Hoja_De_Vida.pdf', '_blank');
+  };
+
   return (
     <>
       <LoadingScreen isLoading={isLoading} />
+      
+      {/* Botón CV Flotante - Responsivo y minimalista */}
+      {!isLoading && !selectedProject && (
+        <button
+          onClick={downloadCV}
+          className="fixed top-4 right-4 md:top-8 md:right-8 z-50 group transition-all duration-500 ease-out"
+          style={{
+            opacity: isLoading ? 0 : 0.6,
+            transform: `translateY(${isLoading ? -20 : 0}px)`,
+            animation: isLoading ? 'none' : 'fadeInDown 0.8s ease-out 0.5s both'
+          }}
+        >
+          <div className="relative">
+            {/* Fondo ultra discreto en móvil */}
+            <div className="bg-rose-50/30 backdrop-blur-[1px] border border-rose-200/20 rounded-md px-2.5 py-1.5
+                          md:bg-rose-50/40 md:backdrop-blur-[2px] md:border-rose-200/25 md:rounded-lg md:px-4 md:py-2.5
+                          shadow-sm shadow-rose-500/2 transition-all duration-400 ease-out
+                          group-hover:bg-rose-100/40 group-hover:border-rose-300/30
+                          md:group-hover:bg-rose-100/50 md:group-hover:border-rose-300/35
+                          group-hover:shadow-md group-hover:shadow-rose-500/4
+                          md:group-hover:shadow-rose-500/5
+                          group-hover:scale-[1.01] group-active:scale-[0.99]">
+              
+              {/* Contenido adaptable */}
+              <div className="flex items-center gap-1.5 md:gap-2 text-neutral-600">
+                <Download className="w-3 h-3 md:w-3.5 md:h-3.5 transition-all duration-300 group-hover:text-rose-700/80" />
+                <span className="text-[10px] md:text-xs font-normal tracking-wide">CV</span>
+              </div>
+            </div>
+          </div>
+        </button>
+      )}
       
       <div className="relative bg-gradient-to-br from-rose-50 via-pink-50 to-rose-100 text-neutral-800 overflow-x-hidden">
         {/* 3D Background Canvas - Ultra Smooth */}
@@ -181,6 +220,17 @@ const App = () => {
           @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
+          }
+          
+          @keyframes fadeInDown {
+            from {
+              opacity: 0;
+              transform: translateY(-30px) scale(0.9);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0) scale(1);
+            }
           }
           
           @keyframes scaleX {
