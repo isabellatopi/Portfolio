@@ -2,11 +2,13 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: '/Portfolio/', // Nombre de tu repositorio
+  base: command === 'build' ? '/Portfolio/' : '/',
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false
   },
   server: {
     host: true, // Permite conexiones externas
@@ -19,4 +21,4 @@ export default defineConfig({
       '.ngrok.app'
     ]
   }
-})
+}))
