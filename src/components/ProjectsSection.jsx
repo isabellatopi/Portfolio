@@ -78,7 +78,7 @@ const ProjectsSection = ({ scrollProgress, onProjectSelect, selectedProject }) =
         <div className="text-center mb-24"
              style={{
                transform: `translateY(${Math.max(0, (scrollProgress - 0.15) * -25)}px)`,
-               opacity: scrollProgress > 0.12 ? 1 : 0
+               opacity: scrollProgress > 0.1 ? 1 : 0
              }}>
           <h2 className="text-5xl md:text-7xl font-extralight tracking-[0.1em] mb-8">
             <span className="text-neutral-800">PROYECTOS</span>
@@ -96,7 +96,7 @@ const ProjectsSection = ({ scrollProgress, onProjectSelect, selectedProject }) =
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => {
             const delay = index * 0.01; // Delay mucho más corto entre proyectos
-            const showThreshold = 0.15 + delay; // Umbral más temprano
+            const showThreshold = 0.12 + delay; // Umbral más temprano
             
             return (
               <div
