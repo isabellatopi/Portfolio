@@ -53,7 +53,7 @@ const HeroSection = ({ scrollProgress }) => {
           <p className="text-xl text-neutral-500 max-w-4xl mx-auto mb-16 leading-relaxed">
             Arquitecta enfocada en
             <span className="text-rose-600 font-medium"> diseño integral de interiores y exteriores y desarrollo sostenible</span>, 
-            interes en transformar el tejido urbano desde lo social, ambiental y económico y comprometida con la creación de espacios funcionales y sensibles al contexto.
+            interés en transformar el tejido urbano desde lo social, ambiental y económico y comprometida con la creación de espacios funcionales y sensibles al contexto.
           </p>
           {/*
           <div className="flex flex-col md:flex-row gap-8 justify-center items-center">

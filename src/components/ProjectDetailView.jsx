@@ -200,7 +200,7 @@ const ProjectDetailView = ({ project, onClose, onProjectChange, allProjects }) =
       author: "Isabella Torres",
       stats: [
         { label: "Tipos de Unidades", value: "3" },
-        { label: "Capacidad Máxima", value: "12 personas" },
+        { label: "Duración", value: "2 meses" },
         { label: "Área Muelle", value: "200m²" },
         { label: "Cobertura Manglar", value: "1,500m²" }
       ],
