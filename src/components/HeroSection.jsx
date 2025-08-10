@@ -74,15 +74,14 @@ const HeroSection = ({ scrollProgress }) => {
       {/* Scroll indicator profesional con flecha elegante - Solo visible en desktop */}
       <div className="hidden md:block absolute bottom-12 left-1/2 -translate-x-1/2 text-center opacity-0 animate-[fadeIn_2s_ease-out_2s_forwards]">
         {/* Flecha elegante animada */}
-        <div className="flex flex-col items-center space-y-3">
-          <div className="text-neutral-400 text-xs tracking-[0.2em]">DESCUBRE MÁS</div>
+        <div className="flex flex-col items-center space-y-1">
           
           {/* Línea vertical */}
-          <div className="w-px h-8 bg-gradient-to-b from-rose-300 to-rose-500"></div>
+          <div className="w-px h-9 bg-gradient-to-b from-rose-300 to-rose-500"></div>
           
           {/* Punta de flecha */}
           <div className="relative flex justify-center">
-            <div className="w-3 h-3 border-r-2 border-b-2 border-rose-500 transform rotate-45 animate-pulse"></div>
+            <div className="w-3 h-3 border-r-4 border-b-4 border-rose-500 transform rotate-45 animate-pulse"></div>
             
             {/* Efecto de brillo sutil */}
             <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-6 h-10 bg-gradient-to-b from-rose-200/20 to-transparent animate-pulse pointer-events-none"></div>
