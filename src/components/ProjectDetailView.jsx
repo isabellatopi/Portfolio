@@ -88,9 +88,9 @@ const ProjectDetailView = ({ project, onClose, onProjectChange, allProjects }) =
       title: "CASA LA CORAZZA",
       subtitle: "Rehabilitación Patrimonial", 
       location: "Centro Histórico, Barranquilla",
-      year: "2025",
+      year: "2024 - 2025",
       type: "Patrimonio • Restauración",
-      description: "Proyecto de grado enfocado en la restauración y rehabilitación del patrimonio arquitectónico del centro histórico de Barranquilla, respetando la identidad cultural e histórica del lugar.",
+      description: "Proyecto de grado enfocado en la restauración y rehabilitación del patrimonio arquitectónico del centro histórico de Barranquilla a través de un centro gastronómico, respetando la identidad cultural e histórica del lugar.",
       details: [
         "Análisis detallado del patrimonio existente",
         "Técnicas de restauración especializadas",
@@ -101,10 +101,10 @@ const ProjectDetailView = ({ project, onClose, onProjectChange, allProjects }) =
       quote: "El patrimonio es nuestra responsabilidad hacia el futuro",
       author: "Isabella Torres", 
       stats: [
-        { label: "Año Construcción", value: "1920" },
-        { label: "Área Restaurada", value: "450m²" },
-        { label: "Elementos Patrimoniales", value: "12" },
-        { label: "Valor Histórico", value: "Incalculable" }
+        { label: "Tipo de proyecto", value: "Centro gastronómico" },
+        { label: "Área intervenida", value: "988m²" },
+        { label: "Nivel de conservación", value: "2" },
+        { label: "Enfoque", value: "Desarrollo Sostenible" }
       ],
       images: [
         corazza1,
@@ -121,9 +121,9 @@ const ProjectDetailView = ({ project, onClose, onProjectChange, allProjects }) =
       title: "DISEÑO ALCOBA PRINCIPAL",
       subtitle: "Interiorismo Residencial", 
       location: "Barranquilla, Colombia",
-      year: "2024",
+      year: "2025",
       type: "Interiorismo • Diseño Nórdico",
-      description: "Diseño de alcoba principal con estilo nórdico y minimalista, creando un espacio sereno y funcional con acabados impecables y modernos que reflejan sofisticación y comodidad en cada detalle del ambiente.",
+      description: "Diseño de alcoba principal con estilo nórdico y minimalista, creando un espacio sereno y funcional con acabados impecables y modernos que reflejan elegancia y comodidad en cada detalle del ambiente.",
       details: [
         "Paleta de colores neutros y naturales",
         "Mobiliario de líneas limpias y funcionales",
@@ -131,13 +131,13 @@ const ProjectDetailView = ({ project, onClose, onProjectChange, allProjects }) =
         "Iluminación cálida y estratégicamente distribuida",
         "Espacios de almacenamiento integrados y discretos"
       ],
-      quote: "La simplicidad es la máxima sofisticación",
+      quote: "La simplicidad es la máxima elegancia",
       author: "Isabella Torres",
       stats: [
         { label: "Área Diseñada", value: "22m²" },
-        { label: "Elementos Diseñados", value: "8" },
-        { label: "Tiempo Proyecto", value: "6 semanas" },
-        { label: "Estilo", value: "Nórdico Minimalista" }
+        { label: "Mobiliario Diseñados", value: "3" },
+        { label: "Estilo", value: "Nórdico Minimalista" },
+
       ],
       images: [
         alcoba1,
@@ -154,23 +154,24 @@ const ProjectDetailView = ({ project, onClose, onProjectChange, allProjects }) =
       title: "VIVIENDA VIS",
       subtitle: "Proyecto Residencial",
       location: "El Banco, Magdalena", 
-      year: "2024",
+      year: "2025",
       type: "Vivienda Social • Urbanismo",
       description: "Vivienda de interés social con distribución eficiente que maximiza uso del terreno, incluyendo áreas comunes y espacios recreativos que fomentan la interacción con el entorno y la comunidad local.",
       details: [
         "Optimización del uso del terreno disponible",
         "Distribución eficiente de espacios habitacionales",
         "Incorporación de áreas comunes estratégicas",
-        "Espacios recreativos para interacción comunitaria",
         "Adaptación al contexto climático y cultural regional"
       ],
       quote: "La arquitectura es primordialmente un servicio a la humanidad",
       author: "Francis Kéré",
       stats: [
-        { label: "Unidades", value: "24" },
-        { label: "Área Lote", value: "2,850m²" },
-        { label: "Área Construida", value: "89m²" },
-        { label: "Familias Beneficiadas", value: "96" }
+        { label: "Unidades", value: "8" },
+        { label: "Área Lote", value: "805m²" },
+        { label: "Área Construida", value: "60 - 80 m²" },
+        { label: "Familias Beneficiadas", value: "14" },
+
+
       ],
       images: [
         vis1,
@@ -188,21 +189,21 @@ const ProjectDetailView = ({ project, onClose, onProjectChange, allProjects }) =
       location: "Corregimiento la Playa",
       year: "2023", 
       type: "Vivienda Social • Conectividad Ambiental",
-      description: "Simbiosis entre entorno y naturaleza. Integración con la Ciénaga de Mallorquín a través de propuestas como muelle y conectividad sostenible. Inspirado en el cangrejo azul, animal emblemático de la zona.",
+      description: "Simbiosis entre entorno y naturaleza. Integración con la Ciénaga de Mallorquín a través de propuestas como muelle y conectividad sostenible. Inspirado en el cangrejo azul, animal emblemático de la zona. Enfocado en otorgar identidad y funcionalidad a la comunidad.",
       details: [
         "Conexión directa con la Ciénaga de Mallorquín",
         "Diseño inspirado en el cangrejo azul local", 
         "Muelle para actividades pesqueras comunitarias",
-        "Barrera de manglar como hábitat natural",
+        "Proyecto de desarrollo sostenible",
         "Unidades habitacionales con formas orgánicas"
       ],
       quote: "La naturaleza es la mejor arquitecta",
       author: "Isabella Torres",
       stats: [
         { label: "Tipos de Unidades", value: "3" },
-        { label: "Duración", value: "2 meses" },
+        { label: "Duración", value: "6 meses" },
         { label: "Área Muelle", value: "200m²" },
-        { label: "Cobertura Manglar", value: "1,500m²" }
+        { label: "Unidades de vivienda", value: "24" }
       ],
       images: [
         cazu1,
@@ -220,21 +221,18 @@ const ProjectDetailView = ({ project, onClose, onProjectChange, allProjects }) =
       location: "Corregimiento la Playa",
       year: "2023",
       type: "Paisajismo • Sostenibilidad",
-      description: "Enfoque integral en sostenibilidad ambiental y coexistencia con naturaleza. Destacando la importancia del mangle en la ecología de la ciénaga, creando espacios de conexión y enriquecimiento comunitario.",
+      description: "Enfoque integral en sostenibilidad ambiental y coexistencia con naturaleza. Destacando la importancia del mangle en la ecología de la ciénaga, creando espacios de esparcimiento, conexión y disfrute para la comunidad.",
       details: [
-        "Intervención sostenible del arroyo existente",
+        "Intervención sostenible del arroyo león",
         "Conservación y potenciación de áreas verdes",
         "Espacios estratégicos para interacción comunitaria",
-        "Senderos ecológicos de madera", 
         "Zonas de contemplación y recreación"
       ],
       quote: "La arquitectura sostenible no se trata de moda, se trata de supervivencia",
       author: "Bjarke Ingels",
       stats: [
-        { label: "Área Intervenida", value: "3,000m²" },
         { label: "Senderos", value: "500m" },
-        { label: "Zonas Recreativas", value: "5" },
-        { label: "Especies Conservadas", value: "15+" }
+        { label: "Zonas Recreativas", value: "4" },
       ],
       images: [
         eco1,
@@ -492,7 +490,7 @@ const ProjectDetailView = ({ project, onClose, onProjectChange, allProjects }) =
                 <div className="ml-3 w-6 h-0.5 bg-gradient-to-r from-rose-300 to-transparent"></div>
               </h4>
               <ul className="space-y-2 lg:space-y-3">
-                {currentProject.details.slice(0, 3).map((detail, index) => (
+                {currentProject.details.slice(0, 4).map((detail, index) => (
                   <li key={index} className="flex items-start gap-3 group">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-gradient-to-r from-rose-400 to-pink-500 mt-2 flex-shrink-0 group-hover:scale-125 transition-transform duration-300"></div>
                     <span className="text-neutral-600 text-xs sm:text-sm group-hover:text-neutral-700 transition-colors duration-300">{detail}</span>
