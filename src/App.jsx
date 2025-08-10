@@ -131,32 +131,32 @@ const App = () => {
     <>
       <LoadingScreen isLoading={isLoading} />
       
-      {/* Botón CV Flotante - Responsivo y minimalista */}
+      {/* Botón CV Flotante - Elegante y optimizado */}
       {!isLoading && !selectedProject && (
         <button
           onClick={downloadCV}
-          className="fixed top-4 right-4 md:top-8 md:right-8 z-50 group transition-all duration-500 ease-out"
+          className="fixed top-4 right-4 md:top-8 md:right-8 z-50 group transition-all duration-300 ease-out cursor-pointer"
           style={{
-            opacity: isLoading ? 0 : 0.6,
+            opacity: isLoading ? 0 : 1,
             transform: `translateY(${isLoading ? -20 : 0}px)`,
             animation: isLoading ? 'none' : 'fadeInDown 0.8s ease-out 0.5s both'
           }}
         >
           <div className="relative">
-            {/* Fondo ultra discreto en móvil */}
-            <div className="bg-rose-50/30 backdrop-blur-[1px] border border-rose-200/20 rounded-md px-2.5 py-1.5
-                          md:bg-rose-50/40 md:backdrop-blur-[2px] md:border-rose-200/25 md:rounded-lg md:px-4 md:py-2.5
-                          shadow-sm shadow-rose-500/2 transition-all duration-400 ease-out
-                          group-hover:bg-rose-100/40 group-hover:border-rose-300/30
-                          md:group-hover:bg-rose-100/50 md:group-hover:border-rose-300/35
-                          group-hover:shadow-md group-hover:shadow-rose-500/4
-                          md:group-hover:shadow-rose-500/5
-                          group-hover:scale-[1.01] group-active:scale-[0.99]">
+            {/* Fondo elegante sin efectos pesados */}
+            <div className="bg-white/70 backdrop-blur-sm border border-rose-200 rounded-full px-4 py-2
+                          md:px-6 md:py-2.5 shadow-lg shadow-rose-500/10 transition-all duration-200 ease-out
+                          group-hover:bg-white/85 group-hover:border-rose-300 group-hover:shadow-xl 
+                          group-hover:shadow-rose-500/15 group-hover:scale-[1.02] group-active:scale-[0.98]">
               
-              {/* Contenido adaptable */}
-              <div className="flex items-center gap-1.5 md:gap-2 text-neutral-600">
-                <Download className="w-3 h-3 md:w-3.5 md:h-3.5 transition-all duration-300 group-hover:text-rose-700/80" />
-                <span className="text-[10px] md:text-xs font-normal tracking-wide">CV</span>
+              {/* Contenido simplificado */}
+              <div className="flex items-center gap-2 md:gap-2.5 text-rose-700">
+                <Download className="w-3.5 h-3.5 md:w-4 md:h-4 transition-colors duration-200 
+                                  group-hover:text-rose-800" />
+                <span className="text-xs md:text-sm font-light tracking-[0.15em] 
+                               transition-colors duration-200">
+                  CV
+                </span>
               </div>
             </div>
           </div>
@@ -239,8 +239,21 @@ const App = () => {
           }
 
           @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
+            0% { 
+              left: -100%; 
+              opacity: 0;
+            }
+            50% {
+              opacity: 1;
+            }
+            100% { 
+              left: 100%; 
+              opacity: 0;
+            }
+          }
+          
+          .animate-shimmer {
+            animation: shimmer 1.5s ease-in-out;
           }
         `}</style>
       </div>
